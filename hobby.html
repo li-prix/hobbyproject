@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Equestrianism</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    body {
+      font-family: "Roboto Serif", serif;
+    }
+    section {
+      background-color: white;
+    }
+
+    .banner-image-container {
+      height: 75vh;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 20px;
+    }
+    @media only screen and (max-width: 480px) {
+      .banner-image-container {
+        height: 50vh;
+      }
+      .jumping-background {
+        height: 50vh;
+      }
+      .dressage-background {
+        height: 50vh;
+      }
+      .eventing-background {
+        height: 50vh;
+      }
+    }
+    .banner-image {
+      background: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/091/047/original/kenny-webster-QrJc1RVI7uM-unsplash.jpg?1690208032");
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+      padding: 40px;
+      transition: transform 2s;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+    .banner-image:hover {
+      transform: scale(1.1);
+    }
+
+    a:hover {
+      color: gray;
+    }
+    .jumping-background {
+      background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/091/683/original/philippe-oursel-UVXQgi4o8Zg-unsplash.jpg?1690797978");
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      height: 400px;
+    }
+    .dressage-background {
+      background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/091/680/original/elisa-pitkanen-2w4e5wZudcM-unsplash.jpg?1690797787");
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      height: 400px;
+    }
+    .eventing-background {
+      background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/091/421/original/R3DE_XCountry.jpeg?1690541374");
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      height: 400px;
+    }
+    .info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .title {
+      font-size: 48px;
+    }
+    .section-reasons {
+      background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/091/689/original/louise-pilgaard-3SM_F21nzSw-unsplash.jpg?1690802490");
+      height: 150px;
+      background-position: center;
+      background-size: cover;
+    }
+    .section-title {
+      font-size: 32px;
+      font-weight: bolder;
+      margin-left: 15px;
+      margin-top: 50px;
+    }
+    .row {
+      margin-right: 0px;
+      margin-left: 0px;
+    }
+    .card {
+      border: 0px;
+    }
+    .card-text {
+      font-size: 14px;
+    }
+  </style>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-light fs-6">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">E</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#showjumping">Show Jumping</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#dressage">Dressage</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#eventing">Eventing</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-1"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-dark" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="banner-image-container">
+      <div class="banner-image"></div>
+    </div>
+    <div class="my-5">
+      <div class="title container text-center fw-bold">Equestrianism</div>
+      <div class="container text-center fs-6 py-5">
+        Equestrianism, commonly known as horse riding or horseback riding,
+        includes the disciplines of riding, driving, and vaulting. Equestrian
+        events were first included in the modern Olympic Games in 1900. The
+        following forms of competition are recognized worldwide and are a part
+        of the equestrian events at the Olympics. They are governed by the rules
+        of the International Federation for Equestrian Sports
+        <a href="https://www.fei.org/" target="_blank">(FEI)</a>. Show jumping
+        comprises a timed event judged on the ability of the horse and rider to
+        jump over a series of obstacles, in a given order and with the fewest
+        refusals or knockdowns of portions of the obstacles. Dressage
+        ("training" in French) involves the progressive training of the horse to
+        a high level of impulsion, collection and obedience. Eventing, also
+        called combined training, horse trials, the three-day event, the
+        Military or the complete test, puts together the obedience of dressage
+        with the athletic ability of show jumping, the fitness demands the
+        cross-country jumping phase.
+      </div>
+    </div>
+
+    <section class="jumping-background shadow p-3 mb-5 bg-light"></section>
+
+    <div class="row p-5 my-3 align-items-center">
+      <div class="col-lg flex-wrap justify-content-center">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/091/681/original/k-mitch-hodge-tA9xkdbukdc-unsplash.jpg?1690797881"
+          class="w-100"
+        />
+      </div>
+      <div class="info col-lg text-center p-4">
+        <h3 class="fw-bold mt-5" id="showjumping">Show Jumping</h3>
+        <p class="fs-6 p-3 mb-0">
+          Competitive equestrian event in which horse and rider are required to
+          jump, usually within a time limit, a series of obstacles that have
+          been designed for a particular showIt consists of a horse and rider
+          combination jumping around a course of fences, set to a particular
+          height, within the time allowed. Penalties are incurred in a horse
+          knocks a jump or refuses. Penalties are also incurred in you exceed
+          the time allowed.
+        </p>
+        <a
+          class="btn btn-link"
+          href="https://en.wikipedia.org/wiki/Show_jumping"
+          target="_blank"
+          role="button"
+          >Read More</a
+        >
+      </div>
+    </div>
+
+    <section class="dressage-background shadow p-3 mb-5 bg-light"></section>
+
+    <div class="row p-5 my-3 align-items-center">
+      <div class="col-lg justify-content-center">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/091/420/original/Marlies_van_Baalen_with__Kigali_.jpg?1690541131"
+          class="w-100"
+        />
+      </div>
+      <div class="info col-lg text-center p-4">
+        <h3 class="fw-bold mt-5" id="dressage">Dressage</h3>
+        <p class="fs-6 p-0 mb-0">
+          Competitive dressage has the goal of showing the horse carrying out,
+          on request, the natural movements that it performs without thinking
+          while running loose. It consists of a series of compulsory movements,
+          in walk, trot and canter, in an arena measuring 60mx20m, where 12
+          lettered markers are placed symmetrically along the fence, indicating
+          where movements are to start, where changes of pace or lead are to
+          occur and where the movements are to end. The judges mark the
+          fluidity, the regularity of the movements and the paces.
+        </p>
+        <a
+          class="btn btn-link"
+          href="https://en.wikipedia.org/wiki/Dressage"
+          target="_blank"
+          role="button"
+          >Read More</a
+        >
+      </div>
+    </div>
+    <section class="eventing-background shadow p-3 mb-5 bg-light"></section>
+    <div class="row p-5 my-3 align-items-center">
+      <div class="col-lg justify-content-center">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/091/423/original/454_Paul_Sims_on_Sunny_Boy.jpg?1690542051"
+          class="w-100"
+        />
+      </div>
+      <div class="info col-lg text-center p-4">
+        <h3 class="fw-bold mt-5" id="eventing">Eventing</h3>
+        <p class="fs-6 p-3 mb-0">
+          It consists of three disciplines – dressage, show jumping and cross
+          country. The dressage phase is always completed first, followed by
+          show jumping and cross country, in either order. The same horse and
+          rider combination must complete all three phases. The horses jump over
+          fixed obstacles, such as logs, stone walls, banks, ditches and water,
+          trying to finish the course under the "optimum time." There was also
+          the 'Steeple Chase' Phase, which is now excluded from most major
+          competitions to bring them in line with the Olympic standard.
+        </p>
+        <a
+          class="btn btn-link"
+          href="https://en.wikipedia.org/wiki/Eventing"
+          target="_blank"
+          role="button"
+          >Read More</a
+        >
+      </div>
+    </div>
+    <div class="section-reasons py-5 shadow p-3 mb-5 bg-light">
+      <div class="section-title">Benefits of Horse Riding</div>
+    </div>
+    <div class="row p-5 mt-3">
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title fw-bold pb-3">Bulding Confidence</h5>
+            <p class="card-text">
+              Confidence is necessary for a healthy mental state. If we lack
+              confidence, we are more likely to suffer from anxiety and
+              depression. As stated earlier, horses pick up on how we are
+              feeling inside. In order to control a horse, you have to display
+              that you can be a leader – you have to show your horse that you
+              are confident, even when you don’t feel it. What better way to
+              build confidence in yourself than in managing a 1,000-pound
+              animal?
+            </p>
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title fw-bold pb-3">Muscle Strenghtening</h5>
+            <p class="card-text">
+              When you first start riding horses, you will be sore in muscles
+              that you never even realized you had. While one can argue that
+              horseback riding works out virtually every muscle in your body,
+              the focus is on the abdominals, back muscles, pelvis, and thighs –
+              especially the inner thighs.
+            </p>
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title fw-bold pb-3">Better Posture</h5>
+            <p class="card-text">
+              While our modern lifestyle is not conducive to proper ergonomics,
+              horseback riding can help us in this regard by forcing us to adopt
+              a better posture. When you are riding a horse, you have a number
+              of different cues that you are using to communicate with your
+              horse – your legs, your reins, and your seat. And while many might
+              focus more on the reins or the legs, we have more contact with our
+              horse’s body through our seat than through any other cue.
+            </p>
+            <!-- a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title fw-bold pb-3">It reduces stress</h5>
+            <p class="card-text">
+              Horseback riding is an effective stress reducer, for a number of
+              reasons – you are forced to be calm, you are outdoors, and you are
+              working with animals. When you are in the saddle, your horse will
+              pick up on your energy and will emulate it. If you are afraid,
+              your horse will assume it is for good reason and may become
+              anxious as well. If you are tense, your horse will tense up too.
+              To ride a horse, you have to take a deep breath, and force
+              yourself to adopt a calm presence.
+            </p>
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center fw-bold"><h2>Get in Touch!</h2></div>
+    <div class="row py-3 justify-content-center">
+      <div class="col-6">
+        <form id="myForm" class="row g-3 needs-validation">
+          <div class="col-md-6">
+            <label for="validationCustom01" class="form-label"
+              >First name</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustom01"
+              value=""
+              required
+            />
+            <div class="valid-feedback">Looks good!</div>
+          </div>
+          <div class="col-md-6">
+            <label for="validationCustom02" class="form-label">Last name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustom02"
+              value=""
+              required
+            />
+            <div class="valid-feedback">Looks good!</div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="validationCustom03" class="form-label">City</label>
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustom03"
+              required
+            />
+            <div class="invalid-feedback">Please provide a valid city.</div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">State</label>
+            <select class="form-select" id="validationCustom04" required>
+              <option selected disabled value="">Choose...</option>
+              <option value="Alabama">Alabama</option>
+              <option value="Alaska">Alaska</option>
+              <option value="Arizona">Arizona</option>
+              <option value="Arkansas">Arkansas</option>
+              <option value="California">California</option>
+              <option value="Colorado">Colorado</option>
+              <option value="Connecticut">Connecticut</option>
+              <option value="Delaware">Delaware</option>
+              <option value="District of Columbia">District of Columbia</option>
+              <option value="Florida">Florida</option>
+              <option value="Georgia">Georgia</option>
+              <option value="Guam">Guam</option>
+              <option value="Hawaii">Hawaii</option>
+              <option value="Idaho">Idaho</option>
+              <option value="Illinois">Illinois</option>
+              <option value="Indiana">Indiana</option>
+              <option value="Iowa">Iowa</option>
+              <option value="Kansas">Kansas</option>
+              <option value="Kentucky">Kentucky</option>
+              <option value="Louisiana">Louisiana</option>
+              <option value="Maine">Maine</option>
+              <option value="Maryland">Maryland</option>
+              <option value="Massachusetts">Massachusetts</option>
+              <option value="Michigan">Michigan</option>
+              <option value="Minnesota">Minnesota</option>
+              <option value="Mississippi">Mississippi</option>
+              <option value="Missouri">Missouri</option>
+              <option value="Montana">Montana</option>
+              <option value="Nebraska">Nebraska</option>
+              <option value="Nevada">Nevada</option>
+              <option value="New Hampshire">New Hampshire</option>
+              <option value="New Jersey">New Jersey</option>
+              <option value="New Mexico">New Mexico</option>
+              <option value="New York">New York</option>
+              <option value="North Carolina">North Carolina</option>
+              <option value="North Dakota">North Dakota</option>
+              <option value="Northern Marianas Islands">
+                Northern Marianas Islands
+              </option>
+              <option value="Ohio">Ohio</option>
+              <option value="Oklahoma">Oklahoma</option>
+              <option value="Oregon">Oregon</option>
+              <option value="Pennsylvania">Pennsylvania</option>
+              <option value="Puerto Rico">Puerto Rico</option>
+              <option value="Rhode Island">Rhode Island</option>
+              <option value="South Carolina">South Carolina</option>
+              <option value="South Dakota">South Dakota</option>
+              <option value="Tennessee">Tennessee</option>
+              <option value="Texas">Texas</option>
+              <option value="Utah">Utah</option>
+              <option value="Vermont">Vermont</option>
+              <option value="Virginia">Virginia</option>
+              <option value="Virgin Islands">Virgin Islands</option>
+              <option value="Washington">Washington</option>
+              <option value="West Virginia">West Virginia</option>
+              <option value="Wisconsin">Wisconsin</option>
+              <option value="Wyoming">Wyoming</option>
+            </select>
+            <div class="invalid-feedback">Please select a valid state.</div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom05" class="form-label">Zip</label>
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustom05"
+              required
+            />
+            <div class="invalid-feedback">Please provide a valid zip.</div>
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="invalidCheck"
+                required
+              />
+              <label class="form-check-label" for="invalidCheck">
+                Agree to terms and conditions
+              </label>
+              <div class="invalid-feedback">
+                You must agree before submitting.
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-light button" type="submit">
+              Submit form
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    >
+      (function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+        .forEach(function(forms) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+          }, false)
+        })
+      })()
+    </script>
+  </body>
+</html>
